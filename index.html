@@ -4,6 +4,26 @@
     <head>
         <meta charset="utf-8" />
         <title>Some Website</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                text-align: left;
+                padding: 8px;
+                border-bottom: 1px solid black;
+            }
+
+            th {
+                background-color: #868cd4;
+            }
+
+            td {
+                background-color: aqua;
+            }
+        </style>
     </head>
 
     <body>
@@ -28,6 +48,33 @@
             <textarea id="message" name="message"></textarea><br><br>
             <input type="submit" value="Отправить">
         </form>
+        <h1>Таблица</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Отчество</th>
+                    <th>Возраст</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Петр</td>
+                    <td>Петров</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Иван</td>
+                    <td>Иванов</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Анатолий</td>
+                    <td>Анатольевич</td>
+                    <td>41</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 
 </html>
