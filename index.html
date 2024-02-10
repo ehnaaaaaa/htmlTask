@@ -4,6 +4,11 @@
     <head>
         <meta charset="utf-8" />
         <title>Some Website</title>
+        <script>
+           function showDate() {
+                document.getElementById("date").innerHTML = Date();
+           }
+        </script>
         <style>
             table {
                 border-collapse: collapse;
@@ -48,7 +53,7 @@
 
     <body>
         <nav>
-            <ul class="dropdown">
+            <ul>
                 <li><a href="form.html">Ссылка на форму</a></li>
                 <li><a href="table.html">Ссылка на таблицу</a></li>
                 <li><a href="list.html">Ссылка на список</a></li>
@@ -63,5 +68,9 @@
         <p>Пятый абзац текста</p>
         <br>
         <img src="source/funnyMonkey.jpg" alt="funnyMonkey">
+        <br>
+        <p>Узнайте дату и время</p>
+        <button onclick="showDate()">Дата и время</button>
+        <p id="date"></p>
     </body>
 </html>
