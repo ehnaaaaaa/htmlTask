@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Adaptive Site</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                text-align: left;
+                padding: 8px;
+                border-bottom: 1px solid black;
+            }
+
+            th {
+                background-color: gray;
+            }
+
+            td {
+                background-color: white;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            @media (min-width: 498px) {
+                .container {
+                    flex: 0 0 33.33%;
+                    max-width: 33.33%;
+                }
+            }
+
+            @media (min-width: 990px) {
+                .container {
+                    flex: 0 0 75%;
+                    max-width: 75%;
+                    order: 2;
+                }
+            }
+
+            @media (min-width: 1400px) {
+                .container {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Возраст</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Петр</td>
+                        <td>Петров</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Иван</td>
+                        <td>Иванов</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Анатолий</td>
+                        <td>Анатольевич</td>
+                        <td>41</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
