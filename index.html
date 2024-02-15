@@ -10,25 +10,6 @@
            }
         </script>
         <style>
-            table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            th, td {
-                text-align: left;
-                padding: 8px;
-                border-bottom: 1px solid black;
-            }
-
-            th {
-                background-color: #868cd4;
-            }
-
-            td {
-                background-color: aqua;
-            }
-
             nav ul {
                 list-style-type: none;
                 margin: 0;
@@ -48,29 +29,38 @@
             nav a:hover {
                 color: #007bff;
             }
+
+            body {
+                margin: 0;
+            }
         </style>
     </head>
 
-    <body>
-        <nav>
-            <ul>
-                <li><a href="form.html">Ссылка на форму</a></li>
-                <li><a href="table.html">Ссылка на таблицу</a></li>
-                <li><a href="list.html">Ссылка на список</a></li>
-                <li><a href="frame.html">Ссылка на формы</a></li>
-            </ul>
-        </nav>
-        <h1>Пример заголовка</h1>
-        <p>Первый абзац текста</p>
-        <p>Второй абзац текста</p>
-        <p>Третий абзац текста</p>
-        <p>Четвертый абзац текста</p>
-        <p>Пятый абзац текста</p>
-        <br>
-        <img src="source/funnyMonkey.jpg" alt="funnyMonkey">
-        <br>
-        <p>Узнайте дату и время</p>
-        <button onclick="showDate()">Дата и время</button>
-        <p id="date"></p>
-    </body>
+        <body>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="form.html">Ссылка на форму</a></li>
+                        <li><a href="table.html">Ссылка на таблицу</a></li>
+                        <li><a href="list.html">Ссылка на список</a></li>
+                        <li><a href="frame.html">Ссылка на фреймы</a></li>
+                        <li><a href="adaptive.html">Ссылка на адаптивный сайт</a></li>
+                    </ul>
+                </nav>
+                <h1>Пример заголовка</h1>
+                <p>Первый абзац текста</p>
+                <p>Второй абзац текста</p>
+                <p>Третий абзац текста</p>
+                <p>Четвертый абзац текста</p>
+                <p>Пятый абзац текста</p>
+                <br>
+                <div class="imgs">
+                    <img src="source/funnyMonkey.jpg" alt="funnyMonkey" id="imgs">
+                </div>
+                <br>
+                <p>Узнайте дату и время</p>
+                <button onclick="showDate()">Дата и время</button>
+                <p id="date"></p>
+            </div>
+        </body>
 </html>
