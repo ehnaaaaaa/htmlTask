@@ -2,87 +2,94 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Adaptive Site</title>
+        <title>Adaptive site</title>
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-            table {
-                border-collapse: collapse;
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            @media screen and (min-width: 720px) {
+                .navMenu {
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+
+                .navElem {
+                    padding: 16px;
+                }
+
+                .mainElem {
+                    width: 300px;
+                    height: 400px;
+                    margin: 10px;
+                }
+            }
+
+            @media screen and (max-width: 720px) {
+                .navMenu {
+                    flex-direction: column;
+                }
+
+                .navElem {
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                .mainElem {
+                    width: 150px;
+                    height: 200px;
+                    margin: 10px;
+                }
+            }
+
+            .body {
+                min-height: 150vh;
+                font-family: 'Franklin Gothic Medium';
+            }
+
+            .navMenu {
                 width: 100%;
+                display: flex;
             }
 
-            th, td {
-                text-align: left;
-                padding: 8px;
-                border-bottom: 1px solid black;
+            .navElem {
+                border: 1px black;
             }
 
-            th {
-                background-color: gray;
-            }
-
-            td {
-                background-color: white;
-            }
-
-            .container {
+            .wrapper {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-around;
             }
 
-            body {
-                margin: 0;
-            }
-
-            @media (min-width: 498px) {
-                .container {
-                    flex: 0 0 33.33%;
-                    max-width: 33.33%;
-                }
-            }
-
-            @media (min-width: 990px) {
-                .container {
-                    flex: 0 0 75%;
-                    max-width: 75%;
-                    order: 2;
-                }
-            }
-
-            @media (min-width: 1400px) {
-                .container {
-                    flex: 0 0 100%;
-                    max-width: 100%;
-                }
+            .mainElem {
+                border: 1px black;
+                text-align: center;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Имя</th>
-                        <th>Отчество</th>
-                        <th>Возраст</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Петр</td>
-                        <td>Петров</td>
-                        <td>27</td>
-                    </tr>
-                    <tr>
-                        <td>Иван</td>
-                        <td>Иванов</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>Анатолий</td>
-                        <td>Анатольевич</td>
-                        <td>41</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="navMenu">
+            <div class="navElem">Элемент 1</div>
+            <div class="navElem">Элемент 2</div>
+            <div class="navElem">Элемент 3</div>
+            <div class="navElem">Элемент 4</div>
+        </div>
+        <div class="main">
+            <div class="wrapper">
+                <div class="mainElem">Пример текста 1</div>
+                <div class="mainElem">Пример текста 2</div>
+                <div class="mainElem">Пример текста 3</div>
+                <div class="mainElem">Пример текста 4</div>
+                <div class="mainElem">Пример текста 5</div>
+                <div class="mainElem">Пример текста 6</div>
+            </div>
         </div>
     </body>
 </html>
